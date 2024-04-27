@@ -3,18 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Adalab Web Starter Kit</title>
+    <title>Buscador de Cócteles</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./scss/main.scss" />
-    <link rel="icon" href="./images/favicon.png" />
+    
   </head>
 
   <body>
-    <div class="page">
-      <load src="./partials/header.html" title="Bienvenidos a Adalab" />
-      <load src="./partials/main.html" />
-      <load src="./partials/footer.html" />
-    </div>
+    <header class="header">
+      <h1 class="header__h1">Buscador de Cócteles</h1>
+    </header>
+    <main class="main">
+      <form action="main__form">
+        <input type="text" class="text js_input_text" name="name" id="name">
+        <button class="search js_search">Buscar</button>
+        <button class="reset js_reset">Reset</button>
+      </form>
+      <div></div>
+    </main>
+    <footer></footer>
     <script src="./js/main.js"></script>
   </body>
 </html>
