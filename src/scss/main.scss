@@ -6,3 +6,19 @@
 @import 'layout/header';
 @import 'layout/footer';
 @import 'pages/index';
+
+
+.cards__cocktails{
+    display: flex;
+    gap: 30px;
+    margin-top: 40px;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.cocktails--sectionResults{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding: 30px;
+}
