@@ -1,14 +1,14 @@
-@import 'core/variables';
+/*@import 'core/variables';
 @import 'core/reset';
 @import 'components/code';
 @import 'components/links';
 @import 'layout/page';
 @import 'layout/header';
 @import 'layout/footer';
-@import 'pages/index';
+@import 'pages/index';*/
 
 
-.cards__cocktails{
+.cocktail-item{
     display: flex;
     gap: 30px;
     margin-top: 40px;
@@ -21,4 +21,13 @@
         flex-wrap: wrap;
         justify-content: space-evenly;
         padding: 30px;
+}
+.cocktail-item{
+    background-color: aqua;
+    width: 100px;
+    height: 100px;
+}
+.small-img{
+    width: 100px;
+    height: 100px;
 }
