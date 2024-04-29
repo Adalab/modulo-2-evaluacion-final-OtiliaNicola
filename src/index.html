@@ -1,41 +1,44 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Buscador de Cócteles</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="./scss/main.scss" />
-    
-  </head>
 
-  <body>
-    <header class="header">
-      <h1 class="header__h1">Buscador de Cócteles</h1>
-    </header>
-    <main class="main">
-      <form action="" id="result">
-        <input type="text" class="text js_input_text" name="name" id="name" placeholder="Nombre del cóctel"/>
-        <button class="button js_search">Buscar</button>
-        <button class="button js_reset">Reset</button>
-      </form>
-      <div class="cocktails-list">
-        <section>
-          <h2>Cócteles favoritos</h2>
-          <ul id="cocktails-favourites" class="js_favourites">
-            <!--li-->
-          </ul>
-        </section>
-        <section class="section__results">
-          <h2>Lista</h2>
-          <ul id="cocktails-list" 
-          class="js_list cards__cocktails-sectionResults">
-            <!-- li-->
-          </ul>
-        </section>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Buscador de Cócteles</title>
+  <link rel="icon" href="./images/images.png">
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./scss/main.scss" />
+</head>
+
+<body>
+  <header class="header">
+    <h1 class="header__h1">Buscador de Cócteles</h1>
+  </header>
+  <main class="main">
+    <form  class="form" action="" id="result">
+      <input type="text" class="search__text js_input_text" name="name" id="name" placeholder="Nombre del cóctel" />
+      <button class="search__btn js_search">Buscar</button>
+      <button class="search__btn js_reset">Reset</button>
+    </form>
+    <section class="sections__list">
+      <div class="section__fav">
+        <h2 class="section__fav--titleFav">Cócteles favoritos</h2>
+      <ul id="cocktails-favourites" class="section__fav--ulFAv js_favourites">
+        <!--li-->
+      </ul>
       </div>
-    </main>
-    <footer></footer>
-    <script src="./js/main.js"></script>
-  </body>
+      <div class="section__all">
+        <h2 class="section__all--title">Lista</h2>
+        <ul id="cocktails-list" class="js_list section__all--ul">
+        <!-- li-->
+      </ul>
+      </div>
+    </section>
+
+  </main>
+  <footer class="footer">CóctelMania &copy;2024</footer>
+  <script src="./js/main.js"></script>
+  <script src="https://kit.fontawesome.com/cc33beee69.js" crossorigin="anonymous"></script>
+</body>
+
 </html>

@@ -27,13 +27,13 @@ function addToFavourites(cocktail) {
 
     //Añadimos elemento html a listado de favoritos
     const li = document.createElement('li');
-    li.classList.add('cocktail-item',);
+    li.classList.add('section__all--licoc');
     li.setAttribute('id', cocktail.idDrink);
     li.dataset.cocktailId = cocktail.idDrink;
     ulFavourites.appendChild(li);
 
     const imageFav = document.createElement('img');
-    li.classList.add('small-img',);
+    imageFav.classList.add('small-img',);
     imageFav.src = cocktail.strDrinkThumb;
     imageFav.setAttribute('alt', cocktail.strDrinkThumb);
     li.appendChild(imageFav);
@@ -102,7 +102,7 @@ function setResultsInList(data) {
         const img = cocktail.strDrinkThumb;
 
         const li = document.createElement('li');
-        li.classList.add('cocktail-item',);
+        li.classList.add('section__all--licoc');
         li.setAttribute('id', cocktail.idDrink);
         li.dataset.cocktailId = cocktail.strDrink;
         ul.appendChild(li);
@@ -110,7 +110,8 @@ function setResultsInList(data) {
         h3.textContent = name;
         li.appendChild(h3);
         const image = document.createElement('img');
-        li.classList.add('small-img',);
+        image.classList.add('small-img');
+        li.classList.add('img',);
         image.src = img;
         image.setAttribute('alt', name);
         li.appendChild(image);
@@ -152,6 +153,18 @@ function getResultsFromApi(textToSearch) {
         .then(data => setResultsInList(data))
         .catch(error => console.log(error));
 }
+
+
+function init() {
+    //Generamos la URL incluyendo el parámetro de búsqueda
+    const url = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita`;
+    //Llamamos al API con fetch
+    fetch(url)
+        .then(response => response.json())
+        .then(data => setResultsInList(data))
+        .catch(error => console.log(error));
+}
+init();
 
 // hacer una función que recupere y pinte la colección de cocktails del localstorage
 function renderFavouritesCocktail() {
