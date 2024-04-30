@@ -7,9 +7,14 @@ function getCocktailImg(cocktail) {
 }
 //Función para crear la lista de favoritos
 function addToFavourites(cocktail) {
+    // Verifico si ya está añadido a favoritos
+    const isAddTuFavourites = favouriteCocktails.some(favCocktail => favCocktail.idDrink === cocktail.idDrink);
+   if(!isAddTuFavourites){
+    //Lo añado a la lista de fav
+    favouriteCocktails.push(cocktail);
     //Añadimos elemento html a listado de favoritos
     const li = document.createElement('li');
-    li.classList.add('section__all--licoc');
+    li.classList.add('section__all--licoc', 'fav-cocktail');
     li.setAttribute('id', cocktail.idDrink);
     li.dataset.cocktailId = cocktail.idDrink;
     ulFavourites.appendChild(li);
@@ -29,6 +34,9 @@ function addToFavourites(cocktail) {
     xBtn.classList.add('remove-button');
     xBtn.addEventListener('click', () => removeFavourite(li));
     li.appendChild(xBtn);
+   } else{
+    console.log('El cóctel ya está en la lista de favoritos.');
+   }
     //Guardamos el nuevo favorito en el LocalStorage
     //1. Recuperamos lo existente en el LocalStorage
     let storedCocktails = JSON.parse(localStorage.getItem("cocktails"));
