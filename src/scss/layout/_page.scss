@@ -1,7 +1,112 @@
-body {
-  padding: 2rem;
-  height: 100vh;
-  background-image: url('../images/bg-adalab.png');
-  background-color: $color-bg;
-  font-family: $font-main;
+.main {
+  background-color: $color-blue;
+  padding-bottom: 4rem;
+  align-items: center;
 }
+
+.form{
+  padding: 0 3rem;
+  gap:1.5rem;
+  font-size: 2rem;
+}
+
+.search__text{    
+  margin: 15px;
+  border: 2px solid $color-swhite;
+  border-radius: 7px;
+  background-color: $color-swhite;
+  height: 25px;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.search__btn{
+      padding: 12px;
+      margin: 15px 0px;
+      border: 2px solid $color-pink;
+      border-radius: 7px;
+      background-color: $color-pink;
+      color: #F7F5EB;
+      cursor: pointer; 
+}
+
+.sections__list{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-evenly;
+} 
+
+.section__all{
+
+  &--title{
+      padding: 15px;
+      background-color: $color-sblue;
+      color: $color-swhite;
+      text-align: center;
+  }
+
+  &--ul{
+
+      border: 3px solid $color-sblue;
+      background-color: $color-swhite;
+      grid-gap: 5px;
+      width: 35vw;
+      padding-right: 15px;
+  }
+}
+.section--all__licoc{
+  margin: 15px;
+  width: 250px;
+  background-color: $color-sblue;
+  border-radius: 10px;
+  padding-bottom: 8px;
+  padding-top: 10px;
+  margin: 15px;
+  cursor: pointer;
+}
+
+h3{
+  display: flex;
+  margin-left: 30px;
+  justify-items: center;
+}
+
+.small-img{
+  display: flex;
+  margin: auto;
+  justify-items: center;
+  padding-top: 30px;
+  width: 240px;
+  object-fit: cover;
+  height: 270px;
+}
+
+.remove-button{
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  color: black;
+  background-color: $color-sblue;
+  width: 1rem;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.section__fav{
+
+  &--titleFav{
+      padding: 15px;
+      background-color: $color-spink;
+      color: $color-swhite;
+      text-align: center;
+  }
+  &--ulFav{
+     
+      border: 3px solid $color-spink;
+      background-color: $color-spink;
+      grid-gap: 5px;
+      width: 35vw;  
+  
+  }
+}
+

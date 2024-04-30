@@ -4,41 +4,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Buscador de Cócteles</title>
+  <title>CóctelMania</title>
   <link rel="icon" href="./images/images.png">
-  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Gloock&amp;family=Zeyada&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./scss/main.scss" />
 </head>
 
 <body>
-  <header class="header">
-    <h1 class="header__h1">Buscador de Cócteles</h1>
-  </header>
-  <main class="main">
-    <form  class="form" action="" id="result">
-      <input type="text" class="search__text js_input_text" name="name" id="name" placeholder="Nombre del cóctel" />
-      <button class="search__btn js_search">Buscar</button>
-      <button class="search__btn js_reset">Reset</button>
-    </form>
-    <section class="sections__list">
-      <div class="section__fav">
-        <h2 class="section__fav--titleFav">Cócteles favoritos</h2>
-      <ul id="cocktails-favourites" class="section__fav--ulFAv js_favourites">
-        <!--li-->
-      </ul>
-      </div>
-      <div class="section__all">
-        <h2 class="section__all--title">Lista</h2>
-        <ul id="cocktails-list" class="js_list section__all--ul">
-        <!-- li-->
-      </ul>
-      </div>
-    </section>
-
-  </main>
-  <footer class="footer">CóctelMania &copy;2024</footer>
+  <load src="./partials/header.html"/>
+  <load src="./partials/main.html"/>
+  <load src="./partials/footer.html"/>
+  
   <script src="./js/main.js"></script>
-  <script src="https://kit.fontawesome.com/cc33beee69.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/8841dc85f6.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
