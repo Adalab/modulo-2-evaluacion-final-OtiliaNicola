@@ -1,8 +1,8 @@
-![CóctelMania🍸​](./public/images/coctel.jpeg)
+![Coctelmania](https://github.com/Adalab/modulo-2-evaluacion-final-OtiliaNicola/assets/162286245/5f0346ba-47e4-4953-adbc-875cf0c8b715)
 
 # Evaluación Módulo 2: JavaScript
 
-Realizar un buscador de cócteles en el que al cargar la página nos encontramos con una lista de Margaritas, pero si introducimos en el buscador cualquier otro y le damos a buscar nos saldrá otra lista en función de la busqueda realizada.
+🍸Realizar un buscador de cócteles en el que al cargar la página nos encontramos con una lista de Margaritas, pero si introducimos en el buscador cualquier otro y le damos a buscar nos saldrá otra lista en función de la busqueda realizada.
 
 Además, podemos añadir a favoritos los cócteles que más nos guste.
 
