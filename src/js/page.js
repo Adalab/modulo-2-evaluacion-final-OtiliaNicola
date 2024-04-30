@@ -141,17 +141,6 @@ function getResultsFromApi(textToSearch) {
         .then(data => setResultsInList(data))
         .catch(error => console.log(error));
 }
-//Función inicial para que nos pinte la li de margaritas
-function init() {
-    //Generamos la URL incluyendo el parámetro de búsqueda
-    const url = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita`;
-    //Llamamos al API con fetch
-    fetch(url)
-        .then(response => response.json())
-        .then(data => setResultsInList(data))
-        .catch(error => console.log(error));
-}
-init();
 //Función que recupere y pinte la colección de cocktails del LS
 function renderFavouritesCocktail() {
     //1.Recuperamos colección de cocktails del LS
@@ -167,6 +156,17 @@ function renderFavouritesCocktail() {
     }
 }
 renderFavouritesCocktail();
+//Función inicial para que nos pinte la li de margaritas
+function init() {
+    //Generamos la URL incluyendo el parámetro de búsqueda
+    const url = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita`;
+    //Llamamos al API con fetch
+    fetch(url)
+        .then(response => response.json())
+        .then(data => setResultsInList(data))
+        .catch(error => console.log(error));
+}
+init();
 
 //Eventos de los botones
 btnSearch.addEventListener('click', handleSearch);
