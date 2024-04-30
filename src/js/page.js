@@ -148,6 +148,7 @@ function renderFavouritesCocktail() {
     //2.Comporbamos que no sea nulo o vacío
     if (storedCocktails && storedCocktails.length > 0) {
         //3.Iteramos la colección y añadimos elementos al ul de Fav 
+        ulFavourites.innerHTML = '';
         //4.Para ello cada elemento del bucle lo mandaremos a la función addtofavourites
         storedCocktails.forEach(cocktail => {
             console.log(cocktail);
