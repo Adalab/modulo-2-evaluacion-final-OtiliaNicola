@@ -33,7 +33,7 @@ npm start
  ![image](https://github.com/luciadelafuente/project-promo-x-module-2-team-1/assets/162286245/585c1c63-fbd4-40dd-bae0-88113d4b3162)
 
 - HTML utilizado para crear la estructura de la aplicación.
-- CSS para darle estilo a la maquetación además del diseño resposive con media queries.
+- CSS para darle un estilo mínimo a la maquetación.
 - SASS para mantener el código ordenado y tenga fácil acceso.
-- JavaScript para darle funcionalidad a los eventos en cuanto a la interactividad por parte del cliente.
+- JavaScript para poner en práctica todo lo aprendido en el módulo 2.
 
