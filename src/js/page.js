@@ -98,15 +98,46 @@ function setResultsInList(data) {
         li.setAttribute('id', cocktail.idDrink);
         li.dataset.cocktailId = cocktail.strDrink;
         ul.appendChild(li);
+
         const h3 = document.createElement('h3');
         h3.textContent = name;
         li.appendChild(h3);
+
         const image = document.createElement('img');
         image.classList.add('small-img');
         li.classList.add('img',);
         image.src = img;
         image.setAttribute('alt', name);
         li.appendChild(image);
+        //Añadir más ingredientes
+        const listIngredients = document.createElement('ul');
+
+        if (cocktail.strIngredient1) {
+            const ingredient1 = document.createElement('li');
+            ingredient1.innerHTML = cocktail.strIngredient1;
+            listIngredients.appendChild(ingredient1);
+        }
+    
+        if(cocktail.strIngredient2){    
+            const ingredient2 = document.createElement('li');
+            ingredient2.innerHTML = cocktail.strIngredient2;
+            listIngredients.appendChild(ingredient2);
+        }
+    
+        if(cocktail.strIngredient3){
+            const ingredient3 = document.createElement('li');
+            ingredient3.innerHTML = cocktail.strIngredient3;
+            listIngredients.appendChild(ingredient3);
+        }
+        
+        if(cocktail.strIngredient4){
+            const ingredient4 = document.createElement('li');
+            ingredient4.innerHTML = cocktail.strIngredient4;
+            listIngredients.appendChild(ingredient4);
+        }
+
+        li.appendChild(listIngredients);
+        ul.appendChild(li);
         //Añadimos el event listener
         addEventListenerToResultItem(li, cocktails);
     }
@@ -130,6 +161,14 @@ function handleReset(event) {
     ulFavourites.innerHTML = '';
     //Limpiar el localStorage
     localStorage.removeItem("cocktails");
+}
+//Función botón log
+function handleLog(event) {
+    event.preventDefault();
+    //recupero la lista
+    const storedCocktails = JSON.parse(localStorage.getItem("cocktails"));
+    const favorites = storedCocktails ? storedCocktails.length : 0;
+    console.log(`Tienes ${favorites}`);
 }
 //Función API
 function getResultsFromApi(textToSearch) {
@@ -172,5 +211,6 @@ init();
 //Eventos de los botones
 btnSearch.addEventListener('click', handleSearch);
 btnReset.addEventListener('click', handleReset);
+btnLog.addEventListener('click', handleLog);
 
 
